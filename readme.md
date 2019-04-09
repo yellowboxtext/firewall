@@ -29,10 +29,14 @@ cscript service-hardening-rules-delete-all.vbs
 ## Теория
 
 Приоритет правила фаервола виндоус.
-Те самые "Service Hardening Rules" находятся на самом верху, проверяются первыми.
-Картинка rules order processing.gif" показывает приоритет правил.
-[Ordering of rules](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755191(v=ws.10))
 
+Те самые "Service Hardening Rules" находятся на самом верху, проверяются первыми.
+
+Картинка "rules order processing.gif" показывает приоритет правил.
+
+[Документация по Ordering of rules на сайте microsoft](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755191(v=ws.10))
+
+Priority ordering of rules:
 1. Windows Service Hardening.
 2. Connection security rules.
 3. Authenticated bypass rules.
