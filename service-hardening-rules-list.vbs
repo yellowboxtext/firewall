@@ -1,7 +1,3 @@
-'https://p0w3rsh3ll.wordpress.com/2014/01/02/list-the-windows-service-hardening-firewall-rules/
-
-'This VBScript adds a port range from 9000 to 9999 for outgoing traffic
-'run as cscript addportrange.vbs on the hyper-v host
 
 option explicit
 
