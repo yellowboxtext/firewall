@@ -30,9 +30,9 @@ Set wshRules = ServiceRestriction.Rules
 'Add outbound WSH allow rules
 Dim Rule1
 Set Rule1 = CreateObject("HNetCfg.FWRule")
-Rule1.Name = "my-hardened-service allow explorer.exe out"
-Rule1.ApplicationName = "c:\windows\explorer.exe"
-Rule1.ServiceName = "myexplorer"
+Rule1.Name = "myservice allow out"
+Rule1.ApplicationName = "c:\windows\myservice.exe"
+Rule1.ServiceName = "myservice"
 Rule1.Protocol = NET_FW_IP_PROTOCOL_TCP
 'Rule1.RemotePorts = "1"
 Rule1.Action = NET_FW_ACTION_ALLOW
@@ -43,9 +43,9 @@ wshRules.Add Rule1
 'Add outbound WSH allow Rule2s
 Dim Rule2
 Set Rule2 = CreateObject("HNetCfg.FWRule")
-Rule2.Name = "my-hardened-service allow explorer.exe in"
-Rule2.ApplicationName = "c:\windows\explorer.exe"
-Rule2.ServiceName = "myexplorer"
+Rule2.Name = "myservice allow in"
+Rule2.ApplicationName = "c:\windows\myservice.exe"
+Rule2.ServiceName = "myservice"
 Rule2.Protocol = NET_FW_IP_PROTOCOL_TCP
 'Rule2.RemotePorts = "1"
 Rule2.Action = NET_FW_ACTION_ALLOW

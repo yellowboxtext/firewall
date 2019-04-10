@@ -3,15 +3,17 @@
 
 "Service Hardening Rules" скрытые !
 Не показываются в панели управления фаервола виндоус :(
-Они доступны (для просмотра и управления) 
-только через специальное системное вызовы (API).
+Они доступны (для просмотра и управления) только через специальные системное вызовы (API).
 
 ## Скрипты
 
 Запускать скрипты в консоли cmd.exe (или в far.exe).
 
-Скрипт добавляющий правила Service Hardening Rule
-Добавляется explorer.exe.
+Скрипт добавляющий правило Service Hardening Rule.
+Добавляется сервис "c:\windows\myservice.exe".
+Такого exe в виндоус нету. 
+Это только пример сервиса.
+Но правило всё же будет создано.
 ```
 cscript service-hardening-rules-add-example.vbs
 ```
@@ -38,8 +40,8 @@ cscript service-hardening-rules-delete-all.vbs
 
 Priority ordering of rules:
 1. Windows Service Hardening.
-2. Connection security rules.
-3. Authenticated bypass rules.
+2. Connection security rules. (consec)
+3. Authenticated bypass rules. (bypass)
 4. Block rules.
 5. Allow rules.
 6. Default rules.
